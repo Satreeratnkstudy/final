@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>แปลงตัวเลขเป็นคำ</title>
+</head>
+<body>
+
+  <h3>ป้อนตัวเลข (0-9):</h3>
+  <input type="text" id="numInput" placeholder="เช่น 1234567890">
+  <button onclick="convert()">แสดง</button>
+
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      let input = document.getElementById("numInput").value;
+      let result = "";
+      
+      // ตารางแปลงตัวเลขเป็นคำ
+      let map = {
+        "0": "zero",
+        "1": "one",
+        "2": "two",
+        "3": "three",
+        "4": "four",
+        "5": "five",
+        "6": "six",
+        "7": "seven",
+        "8": "eight",
+        "9": "nine"
+      };
+
+      for (let i = 0; i < input.length; i++) {
+        let ch = input[i];
+        if (map[ch] !== undefined) {
+          result += map[ch] + ",";
+        }
+      }
+
+      // ลบ , ตัวท้ายสุด
+      result = result.slice(0, -1);
+
+      document.getElementById("result").innerHTML = input + " = " + result;
+    }
+  </script>
+
+</body>
+</html>
+

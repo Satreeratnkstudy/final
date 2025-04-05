@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>แปลงเวลา</title>
+</head>
+<body>
+
+  <h2>ใส่เวลา</h2>
+
+  <form onsubmit="showTime(); return false;">
+    <input type="text" id="timeInput" placeholder="เช่น 11:40:55">
+    <button type="submit">แสดงผล</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function showTime() {
+      const time = document.getElementById("timeInput").value;
+      const parts = time.split(":");
+
+      if (parts.length === 3) {
+        const hh = parts[0];
+        const mm = parts[1];
+        const ss = parts[2];
+
+        document.getElementById("result").innerText =
+          hh + " นาฬิกา " + mm + " นาที " + ss + " วินาที";
+      } else {
+        document.getElementById("result").innerText =
+          "กรอกเวลาในรูปแบบ hh:mm:ss";
+      }
+    }
+  </script>
+
+</body>
+</html>

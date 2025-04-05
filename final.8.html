@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>เปลี่ยนสีพื้นหลัง</title>
+</head>
+<body>
+
+  <h2>เลือกสีพื้นหลัง:</h2>
+
+  <button onclick="changeColor('red')">สีแดง</button>
+  <button onclick="changeColor('blue')">สีน้ำเงิน</button>
+  <button onclick="changeColor('yellow')">สีเหลือง</button>
+  <button onclick="changeColor('white')">Clear สี</button>
+
+  <script>
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>

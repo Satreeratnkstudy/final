@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ข้อมูลบุคคล</title>
+</head>
+<body>
+
+  <h3>ข้อมูลทั้งหมด</h3>
+  <p id="all"></p>
+
+  <h3>ข้อมูลคนที่ 3</h3>
+  <p id="person3"></p>
+
+  <script>
+    // ข้อมูลแต่ละคน (เหมือน JSON)
+    var person1 = "Michael Pinner, 091234567, Physics, 30";
+    var person2 = "David Chicago, 081345678, Physics, 35";
+    var person3 = "Alex Madrid, 085345683, Physics, 25";
+    var person4 = "Denis Paris, 064569385, Chemistry, 24";
+
+    // แสดงข้อมูลทั้งหมด
+    document.getElementById("all").innerHTML = 
+      person1 + "<br>" + 
+      person2 + "<br>" + 
+      person3 + "<br>" + 
+      person4;
+
+    // แสดงเฉพาะคนที่ 3
+    document.getElementById("person3").innerHTML = person3;
+  </script>
+
+</body>
+</html>
+
